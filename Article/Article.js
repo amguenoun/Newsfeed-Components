@@ -162,6 +162,33 @@ function createArticle(item) {
   return article;
 }
 
+data.push({
+  title: 'Great Lambda Topics to Blog About',
+  date: 'Aug 7st, 2019',
+  firstParagraph: `Lorem ipsum dolor sit amet consectetur adipiscing elit, tortor 
+  ullamcorper malesuada nisi viverra fringilla, congue nullam nunc ornare dui condimentum. 
+  At cras curabitur praesent augue placerat ultricies facilisis vulputate, sociis taciti netus 
+   himenaeos fames facilisi, tristique quam nam luctus ut ridiculus leo. Ultrices molestie 
+   lacus dictumst potenti rhoncus sociosqu sagittis pharetra felis, suspendisse auctor 
+   curabitur ullamcorper nam enim tempor vitae, est fringilla vestibulum dictum litora 
+   habitasse mi posuere.`,
+
+  secondParagraph: `Primis montes potenti proin natoque phasellus class ac, eleifend 
+  sociosqu augue ut platea rhoncus purus eros, molestie mi lacinia convallis pretium 
+  fermentum. Velit ultrices sem hac porttitor purus risus cursus ac, cubilia a faucibus 
+  sodales libero ligula ad, dignissim duis ante nisi mollis odio lacus. Netus dictum eros 
+  congue mi bibendum velit sapien luctus class, primis dui at aliquam sagittis nisl ad porta, 
+  pharetra parturient conubia eu magnis fames nulla vitae. `,
+
+  thirdParagraph: `Vel aliquam fames congue dignissim at viverra purus est eros, habitant 
+  aenean turpis praesent eget felis vulputate nisi senectus convallis, cubilia nibh enim 
+  velit rhoncus vehicula condimentum hac. Non suscipit proin sapien senectus ultrices magna 
+  nunc in vehicula, interdum gravida sociis sed convallis neque habitant dis, tempus bibendum 
+  a eleifend vivamus phasellus litora tortor. Primis ante tincidunt purus placerat per taciti 
+  sociis cubilia dictum, scelerisque consequat non faucibus natoque potenti eros viverra a, 
+  convallis eget leo ullamcorper congue auctor eu sodales tempus, nam nisi himenaeos sociosqu 
+  quisque dignissim erat cursus.`
+});
 
 data.forEach((item) => {
   createArticle(item);
