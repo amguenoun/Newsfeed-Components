@@ -128,6 +128,7 @@ function createArticle(item) {
 
   //Attaching classes
   article.classList.add('article');
+  article.classList.add('article-close');
   articleDate.classList.add('date')
   expandBtn.classList.add('expandButton');
 
@@ -153,6 +154,7 @@ function createArticle(item) {
   //adding Eventlisteners
   expandBtn.addEventListener('click', () => {
     article.classList.toggle('article-open');
+    article.classList.toggle('article-close');
     if (expandBtn.textContent === "Click Me to Expand") {
       expandBtn.textContent = "Click Me to Collapse"
     }
