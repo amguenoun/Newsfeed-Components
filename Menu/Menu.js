@@ -35,9 +35,11 @@ let menuItems = [
 */
 
 function menuCreator(item) {
+  //Creating Elements
   const menu = document.createElements('div');
   const list = document.createElements('ul');
-  const listItems = [];
 
+  //Assigning Classes
+  menu.classList.add('menu');
 
 }
