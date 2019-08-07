@@ -113,6 +113,8 @@ const data = [
 
 */
 
+const articlesContainer = document.querySelector('.articles');
+
 function createArticle(item) {
   //Creating elements
   const article = document.createElement('div');
@@ -128,10 +130,20 @@ function createArticle(item) {
   articleDate.classList.add('date')
   expandBtn.classList.add('expandButton');
 
+  //Creating element layout
+  articlesContainer.appendChild(article);
+  article.appendChild(articleTitle);
+  article.appendChild(articleDate);
+  article.appendChild(firstParagraph);
+  article.appendChild(secondParagraph);
+  article.appendChild(thirdParagraph);
+  article.appendChild(expandBtn);
+
   //Assigning values
   articleTitle.textContent = item.title;
   articleDate.textContent = item.date;
   firstParagraph.textContent = item.firstParagraph;
   secondParagraph.textContent = item.secondParagraph;
   thirdParagraph.textContent = item.thirdParagraph;
+
 }
