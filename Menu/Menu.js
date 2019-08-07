@@ -41,6 +41,7 @@ function menuCreator(item) {
 
   //Assigning Classes
   menu.classList.add('menu');
+  menu.classList.add('menu--close');
 
   //Creating Layout
   header.appendChild(menu);
@@ -57,6 +58,7 @@ function menuCreator(item) {
   const menuBtn = document.querySelector('.menu-button');
   menuBtn.addEventListener('click', () => {
     menu.classList.toggle('menu--open');
+    menu.classList.toggle('menu--close');
   });
 }
 

@@ -105,11 +105,10 @@
   cursor: pointer;
 }
 .menu {
-  display: none;
   position: fixed;
   top: 75px;
   left: 0;
-  width: 350px;
+  width: 0px;
   height: 100vh;
   /* This give the height 100% of the screen or, '100% of View Height' */
   background-color: #81C784;
@@ -126,7 +125,30 @@
   text-align: center;
 }
 .menu--open {
-  display: block;
+  animation-name: openMenu;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes openMenu {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 350px;
+  }
+}
+.menu--close {
+  animation-name: closeMenu;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes closeMenu {
+  0% {
+    width: 350px;
+  }
+  100% {
+    width: 0px;
+  }
 }
 html,
 body {
