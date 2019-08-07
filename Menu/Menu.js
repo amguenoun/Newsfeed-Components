@@ -36,8 +36,8 @@ let menuItems = [
 
 function menuCreator(item) {
   //Creating Elements
-  const menu = document.createElements('div');
-  const list = document.createElements('ul');
+  const menu = document.createElement('div');
+  const list = document.createElement('ul');
 
   //Assigning Classes
   menu.classList.add('menu');
@@ -45,5 +45,11 @@ function menuCreator(item) {
   //Creating Layout
   menu.appendChild(list);
 
+  //Creating List Items
+  for (let el of item) {
+    let listItem = document.createElement('li');
+    listItem.textContent = el;
+    list.appendChild(listItem);
+  }
 
 }
