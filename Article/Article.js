@@ -158,6 +158,6 @@ function createArticle(item) {
     }
   });
 
+  //Return finished Component
+  return article;
 }
-
-createArticle(data[0]);
