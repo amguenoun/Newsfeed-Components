@@ -214,5 +214,4 @@ viewAllBtn.addEventListener('click', () => {
   });
 });
 
-console.log(articles)
 articlesContainer.appendChild(viewAllBtn);

@@ -34,6 +34,7 @@ let menuItems = [
   
 */
 const header = document.querySelector('.header');
+
 function menuCreator(item) {
   //Creating Elements
   const menu = document.createElement('div');
