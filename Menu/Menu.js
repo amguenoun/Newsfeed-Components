@@ -42,4 +42,8 @@ function menuCreator(item) {
   //Assigning Classes
   menu.classList.add('menu');
 
+  //Creating Layout
+  menu.appendChild(list);
+
+
 }
