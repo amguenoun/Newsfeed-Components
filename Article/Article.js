@@ -145,5 +145,13 @@ function createArticle(item) {
   firstParagraph.textContent = item.firstParagraph;
   secondParagraph.textContent = item.secondParagraph;
   thirdParagraph.textContent = item.thirdParagraph;
+  expandBtn.textContent = "Click Me to Expand";
 
+  //adding Eventlistener
+  expandBtn.addEventListener('click', () => {
+    expandBtn.classList.toggle('article-open');
+  });
+
+  return article;
 }
+
