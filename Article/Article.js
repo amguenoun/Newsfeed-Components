@@ -149,9 +149,15 @@ function createArticle(item) {
 
   //adding Eventlistener
   expandBtn.addEventListener('click', () => {
-    expandBtn.classList.toggle('article-open');
+    article.classList.toggle('article-open');
+    if (expandBtn.textContent === "Click Me to Expand") {
+      expandBtn.textContent = "Click Me to Collapse"
+    }
+    else {
+      expandBtn.textContent = "Click Me to Expand";
+    }
   });
 
-  return article;
 }
 
+createArticle(data[0]);
