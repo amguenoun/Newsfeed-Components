@@ -53,6 +53,7 @@ function menuCreator(item) {
     list.appendChild(listItem);
   }
 
+  //Create a menuBtn click event
   const menuBtn = document.querySelector('.menu-button');
   menuBtn.addEventListener('click', () => {
     menu.classList.toggle('menu--open');
