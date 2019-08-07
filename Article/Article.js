@@ -197,6 +197,18 @@ data.push({
   quisque dignissim erat cursus.`
 });
 
-data.forEach((item) => {
-  createArticle(item);
+const articles = data.map((item) => {
+  return createArticle(item);
 })
+
+//Creating a viewALlButton
+const viewAllBtn = document.createElement('button');
+viewAllBtn.textContent = "View All Articles"
+viewAllBtn.style.margin = '0 46%'
+viewAllBtn.addEventListener('click', () => {
+  articles.map((item) => {
+    item.style.display = "block";
+  });
+});
+
+articlesContainer.appendChild(viewAllBtn);
