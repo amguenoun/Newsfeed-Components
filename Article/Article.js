@@ -128,5 +128,10 @@ function createArticle(item) {
   articleDate.classList.add('date')
   expandBtn.classList.add('expandButton');
 
-
+  //Assigning values
+  articleTitle.textContent = item.title;
+  articleDate.textContent = item.date;
+  firstParagraph.textContent = item.firstParagraph;
+  secondParagraph.textContent = item.secondParagraph;
+  thirdParagraph.textContent = item.thirdParagraph;
 }
