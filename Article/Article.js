@@ -210,7 +210,9 @@ viewAllBtn.style.margin = '0 46%'
 viewAllBtn.addEventListener('click', () => {
   articles.map((item) => {
     item.style.display = "block";
+    item.classList.toggle('article-close');
   });
 });
 
+console.log(articles)
 articlesContainer.appendChild(viewAllBtn);
