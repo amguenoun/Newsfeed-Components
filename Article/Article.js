@@ -161,3 +161,8 @@ function createArticle(item) {
   //Return finished Component
   return article;
 }
+
+
+data.forEach((item) => {
+  createArticle(item);
+})
