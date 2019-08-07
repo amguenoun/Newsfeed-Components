@@ -74,7 +74,17 @@
   background-color: white;
 }
 .article-open {
-  height: 400px;
+  animation-name: opening;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes opening {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 400px;
+  }
 }
 .menu-button {
   position: absolute;
