@@ -42,6 +42,7 @@ function menuCreator(item) {
   //Assigning Classes
   menu.classList.add('menu');
   menu.classList.add('menu--close');
+  menu.classList.add('menu--start');
 
   //Creating Layout
   header.appendChild(menu);
@@ -59,6 +60,7 @@ function menuCreator(item) {
   menuBtn.addEventListener('click', () => {
     menu.classList.toggle('menu--open');
     menu.classList.toggle('menu--close');
+    menu.classList.remove('menu--start');
   });
 }
 

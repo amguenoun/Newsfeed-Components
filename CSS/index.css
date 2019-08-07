@@ -150,6 +150,9 @@
     width: 0px;
   }
 }
+.menu--start {
+  display: none;
+}
 html,
 body {
   margin: 0;
