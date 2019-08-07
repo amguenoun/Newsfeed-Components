@@ -122,4 +122,11 @@ function createArticle(item) {
   const secondParagraph = document.createElement('p');
   const thirdParagraph = document.createElement('p');
   const expandBtn = document.createElement('span');
+
+  //Attaching classes
+  article.classList.add('article');
+  articleDate.classList.add('date')
+  expandBtn.classList.add('expandButton');
+
+
 }
