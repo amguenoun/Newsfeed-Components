@@ -88,8 +88,8 @@ const data = [
   }
 ];
 
-/* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
-  
+/* Step 1: Create a function that creates a component. You will want your component to look like the template below:
+
   <div class="article">
     <h2>{title of the article}</h2>
     <p class="date">{date of the article}</p>
@@ -112,3 +112,106 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new artible
 
 */
+
+const articlesContainer = document.querySelector('.articles');
+
+function createArticle(item) {
+  //Creating elements
+  const article = document.createElement('div');
+  const articleTitle = document.createElement('h2');
+  const articleDate = document.createElement('p');
+  const firstParagraph = document.createElement('p');
+  const secondParagraph = document.createElement('p');
+  const thirdParagraph = document.createElement('p');
+  const expandBtn = document.createElement('span');
+  const readBtn = document.createElement('button');
+
+  //Attaching classes
+  article.classList.add('article');
+  article.classList.add('article-close');
+  articleDate.classList.add('date')
+  expandBtn.classList.add('expandButton');
+
+  //Creating element layout
+  articlesContainer.appendChild(article);
+  article.appendChild(articleTitle);
+  article.appendChild(articleDate);
+  article.appendChild(firstParagraph);
+  article.appendChild(secondParagraph);
+  article.appendChild(thirdParagraph);
+  article.appendChild(readBtn);
+  article.appendChild(expandBtn);
+
+  //Assigning values
+  articleTitle.textContent = item.title;
+  articleDate.textContent = item.date;
+  firstParagraph.textContent = item.firstParagraph;
+  secondParagraph.textContent = item.secondParagraph;
+  thirdParagraph.textContent = item.thirdParagraph;
+  readBtn.textContent = "I've Read This."
+  expandBtn.textContent = "Click Me to Expand";
+
+  //adding Eventlisteners
+  expandBtn.addEventListener('click', () => {
+    article.classList.toggle('article-open');
+    article.classList.toggle('article-close');
+    if (expandBtn.textContent === "Click Me to Expand") {
+      expandBtn.textContent = "Click Me to Collapse"
+    }
+    else {
+      expandBtn.textContent = "Click Me to Expand";
+    }
+  });
+
+  readBtn.addEventListener('click', () => {
+    article.style.display = "none";
+  });
+
+  //Return finished Component
+  return article;
+}
+
+data.push({
+  title: 'Great Lambda Topics to Blog About',
+  date: 'Aug 7st, 2019',
+  firstParagraph: `Lorem ipsum dolor sit amet consectetur adipiscing elit, tortor 
+  ullamcorper malesuada nisi viverra fringilla, congue nullam nunc ornare dui condimentum. 
+  At cras curabitur praesent augue placerat ultricies facilisis vulputate, sociis taciti netus 
+   himenaeos fames facilisi, tristique quam nam luctus ut ridiculus leo. Ultrices molestie 
+   lacus dictumst potenti rhoncus sociosqu sagittis pharetra felis, suspendisse auctor 
+   curabitur ullamcorper nam enim tempor vitae, est fringilla vestibulum dictum litora 
+   habitasse mi posuere.`,
+
+  secondParagraph: `Primis montes potenti proin natoque phasellus class ac, eleifend 
+  sociosqu augue ut platea rhoncus purus eros, molestie mi lacinia convallis pretium 
+  fermentum. Velit ultrices sem hac porttitor purus risus cursus ac, cubilia a faucibus 
+  sodales libero ligula ad, dignissim duis ante nisi mollis odio lacus. Netus dictum eros 
+  congue mi bibendum velit sapien luctus class, primis dui at aliquam sagittis nisl ad porta, 
+  pharetra parturient conubia eu magnis fames nulla vitae. `,
+
+  thirdParagraph: `Vel aliquam fames congue dignissim at viverra purus est eros, habitant 
+  aenean turpis praesent eget felis vulputate nisi senectus convallis, cubilia nibh enim 
+  velit rhoncus vehicula condimentum hac. Non suscipit proin sapien senectus ultrices magna 
+  nunc in vehicula, interdum gravida sociis sed convallis neque habitant dis, tempus bibendum 
+  a eleifend vivamus phasellus litora tortor. Primis ante tincidunt purus placerat per taciti 
+  sociis cubilia dictum, scelerisque consequat non faucibus natoque potenti eros viverra a, 
+  convallis eget leo ullamcorper congue auctor eu sodales tempus, nam nisi himenaeos sociosqu 
+  quisque dignissim erat cursus.`
+});
+
+const articles = data.map((item) => {
+  return createArticle(item);
+})
+
+//Creating a viewALlButton
+const viewAllBtn = document.createElement('button');
+viewAllBtn.textContent = "View All Articles"
+viewAllBtn.style.margin = '0 46%'
+viewAllBtn.addEventListener('click', () => {
+  articles.map((item) => {
+    item.style.display = "block";
+    item.classList.toggle('article-close');
+  });
+});
+
+articlesContainer.appendChild(viewAllBtn);
